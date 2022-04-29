@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+
 import {goToBookstore} from './common';
 
 const URL_DEMOQA = '/';
@@ -15,14 +16,14 @@ describe('Profile in demoqa ', () => {
     describe('Scenario 1', () => {
 
         it('Bookstore', () => {
-            cy.log('it works')
+            cy.log('It works')
         })
     })
 
     describe('Scenario 2', () => {
 
         it('Bookstore', () => {
-            cy.log('it works')
+            cy.log('It works')
         })
     })
 
