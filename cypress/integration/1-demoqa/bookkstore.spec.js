@@ -17,7 +17,7 @@ describe('Bookstore DEMOQA ', () => {
         bookstore.goToBookstore();
     })
 
-    describe('Scenario 1 - Verify all the buckets works', () => {
+    describe('Scenario 1 - Should search a book from BookStore', () => {
         it('should search a book ', () => {
             cy.wait(2000)
             cy.get('#searchBox').should('exist').type(`${search_book}`)

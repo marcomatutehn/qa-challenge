@@ -1,31 +1,62 @@
 /// <reference types="cypress" />
 import {Login} from "../../pages/Login";
 import {Bookstore} from "../../pages/Bookstore";
+import {Logout} from "../../pages/Logout";
 
 const login = new Login();
+const logout = new Logout();
 const bookstore = new Bookstore();
+
+const userName = Cypress.env('userName');
+const password = Cypress.env('password');
+
+let search_book = 'Git Pocket Guide';
 
 describe('Profile in DEMOQA ', () => {
     before(() => {
         login.navigate();
     })
 
-    it('Open bookstore section', () => {
-        bookstore.goToBookstore();
-    })
+    describe('Scenario 2 - search a book from their profile', () => {
 
-    describe('Scenario 1', () => {
-
-        it('Bookstore', () => {
-            cy.log('it works')
+        it('Open bookstore section', () => {
+            bookstore.goToBookstore();
         })
-    })
 
-    describe('Scenario 2', () => {
+        it('should open login', () => {
+            cy.contains('Login').should('exist').click()
+        });
 
-        it('Bookstore', () => {
-            cy.log('it works')
+        it('should login into DemoQA', () => {
+            login.login(userName, password);
         })
+
+
+        it('should logout from profile ', () => {
+            logout.logout();
+        })
+    });
+
+    describe('Scenario 1 - User is able to open a book from their profile', () => {
+        it('Open bookstore section', () => {
+            bookstore.goToBookstore();
+        })
+
+        it('should open login', () => {
+            cy.contains('Login').should('exist').click()
+        });
+
+        it('should login into DemoQA', () => {
+            login.login(userName, password);
+        })
+
+        it('should open the first book in their profile', () => {
+            cy.wait(2000)
+            cy.get('.mr-2').should('exist').first().click()
+        })
+        it('should go back to book store', function () {
+            cy.get('#addNewRecordButton').should('exist').click()
+        });
     })
 
 
