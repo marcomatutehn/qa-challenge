@@ -5,7 +5,7 @@ describe('Profile in demoqa ', () => {
         cy.visit('https://demoqa.com/')
     })
 
-    it('Profile', () => {
+    it('Bookstore', () => {
 
     })
 
