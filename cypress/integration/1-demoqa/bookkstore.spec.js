@@ -6,6 +6,8 @@ import {Bookstore} from "../../pages/Bookstore";
 const login = new Login();
 const bookstore = new Bookstore();
 
+let search_book = 'Git Pocket Guide';
+
 describe('Bookstore DEMOQA ', () => {
     before(() => {
         login.navigate();
@@ -15,17 +17,16 @@ describe('Bookstore DEMOQA ', () => {
         bookstore.goToBookstore();
     })
 
-    describe('Scenario 1', () => {
-
-        it('Bookstore', () => {
-            cy.log('It works')
-        })
+    describe('Scenario 1 - Verify all the buckets works', () => {
+        it('should search a book ', () => {
+            cy.wait(2000)
+            cy.get('#searchBox').should('exist').type(`${search_book}`)
+        });
     })
 
-    describe('Scenario 2', () => {
-
-        it('Bookstore', () => {
-            cy.log('It works')
+    describe('Scenario 2 - Open a book from results', () => {
+        it('should click and open the first result ', () => {
+            cy.get('.mr-2').should('exist').first().click()
         })
     })
 
