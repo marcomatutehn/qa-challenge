@@ -1,17 +1,18 @@
 /// <reference types="cypress" />
 
+import {Login} from "../../pages/Login";
+import {Bookstore} from "../../pages/Bookstore";
 
-import {goToBookstore} from './common';
+const login = new Login();
+const bookstore = new Bookstore();
 
-const URL_DEMOQA = '/';
-
-describe('Login into demoqa ', () => {
+describe('Login into DEMOQA ', () => {
     before(() => {
-        cy.visit(URL_DEMOQA)
+        login.navigate();
     })
 
     it('Open bookstore section', () => {
-        goToBookstore();
+        bookstore.goToBookstore();
     })
 
     describe('Scenario 1', () => {
