@@ -43,16 +43,16 @@ describe('Login into DEMOQA ', () => {
             cy.get('#newUser').should('exist').click()
         })
         it('should create a new random user', () => {
-            cy.get('#firstname').should('exist').type(userName);
-            cy.get('#lastname').should('exist').type(userName);
-            cy.get('#userName').should('exist').type(userName);
-            cy.get('#password').should('exist').type(password);
+            cy.get('#firstname').should('exist').type(`${userName}`);
+            cy.get('#lastname').should('exist').type(`${userName}`);
+            cy.get('#userName').should('exist').type(`${randomUser}`);
+            cy.get('#password').should('exist').type(`${password}`);
         });
         it('should click on captcha', () => {
             cy.get('[style="width: 304px; height: 78px;"] > div > iframe').should('exist').click({force: true});
         });
-        it('should click on submit', () => {
-
+        it('should click on register', () => {
+            cy.get('#register').should('exist').click()
         });
     })
 
