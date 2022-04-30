@@ -9,11 +9,11 @@
   "chromeWebSecurity": false,
   "reporter": "mochawesome",
   "reporterOptions": {
-    "charts": false,
+    "charts": true,
     "html": true,
     "json": true,
     "reportDir": "cypress/reports",
-    "reportFilename": "report",
+    "reportFilename": "[status]_[datetime]-[name]-report",
     "overwrite": true
   },
   "env": {
