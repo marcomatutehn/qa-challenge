@@ -17,39 +17,32 @@ describe('Profile in DEMOQA ', () => {
         login.navigate();
     })
 
-    describe('Scenario 1 - Should logout from profile', () => {
+    describe('Scenario 1 - User is able to logout from profile', () => {
 
         it('should open bookstore section', () => {
             bookstore.goToBookstore();
-        })
-
+        });
         it('should open login', () => {
             cy.contains('Login').should('exist').click()
         });
-
         it('should login into DemoQA', () => {
             login.login(userName, password);
-
-        })
-
+        });
         it('should validate user login succesfull ', function () {
             cy.url().should('eq', `${Cypress.config('baseUrl')}profile`);
         });
-
         it('should logout from profile ', () => {
             logout.logout();
-        })
+        });
     });
 
     describe('Scenario 2 - User is able to open a book from their profile', () => {
         it('should open bookstore section', () => {
             bookstore.goToBookstore();
         })
-
         it('should open login', () => {
             cy.contains('Login').should('exist').click()
         });
-
         it('should login into DemoQA', () => {
             login.login(userName, password);
         })
