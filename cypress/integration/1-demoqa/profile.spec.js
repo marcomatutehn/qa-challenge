@@ -29,7 +29,7 @@ describe('Profile in DEMOQA ', () => {
             login.login(user_name, password);
         });
         it('should validate user login succesfull ', function () {
-            cy.url().should('eq', `${Cypress.config('baseUrl')}profile`);
+            cy.url().should('eq', `${Cypress.config('baseUrl')}/profile`);
         });
         it('should logout from profile ', () => {
             logout.logout();
