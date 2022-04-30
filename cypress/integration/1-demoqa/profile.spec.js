@@ -17,9 +17,9 @@ describe('Profile in DEMOQA ', () => {
         login.navigate();
     })
 
-    describe('Scenario 2 - search a book from their profile', () => {
+    describe('Scenario 1 - Should logout from profile', () => {
 
-        it('Open bookstore section', () => {
+        it('should open bookstore section', () => {
             bookstore.goToBookstore();
         })
 
@@ -37,8 +37,8 @@ describe('Profile in DEMOQA ', () => {
         })
     });
 
-    describe('Scenario 1 - User is able to open a book from their profile', () => {
-        it('Open bookstore section', () => {
+    describe('Scenario 2 - User is able to open a book from their profile', () => {
+        it('should open bookstore section', () => {
             bookstore.goToBookstore();
         })
 
