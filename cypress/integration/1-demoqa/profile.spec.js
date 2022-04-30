@@ -7,7 +7,7 @@ const login = new Login();
 const logout = new Logout();
 const bookstore = new Bookstore();
 
-const userName = Cypress.env('userName');
+const user_name = Cypress.env('userName');
 const password = Cypress.env('password');
 
 let search_book = 'Git Pocket Guide';
@@ -26,7 +26,7 @@ describe('Profile in DEMOQA ', () => {
             cy.contains('Login').should('exist').click()
         });
         it('should login into DemoQA', () => {
-            login.login(userName, password);
+            login.login(user_name, password);
         });
         it('should validate user login succesfull ', function () {
             cy.url().should('eq', `${Cypress.config('baseUrl')}profile`);
@@ -44,7 +44,7 @@ describe('Profile in DEMOQA ', () => {
             cy.contains('Login').should('exist').click()
         });
         it('should login into DemoQA', () => {
-            login.login(userName, password);
+            login.login(user_name, password);
         })
 
         it('should open the first book in their profile', () => {
