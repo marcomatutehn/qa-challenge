@@ -4,7 +4,7 @@ Automation suite created with [**cypress automation framework**]((https://www.cy
 
 ## Installation
 
-For run the automation suite you must install the following programs:
+For run the automation suite you must install the following tools:
 
 - [Node](https://nodejs.org/en/)
 - [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
