@@ -7,6 +7,15 @@
     "openMode": 0
   },
   "chromeWebSecurity": false,
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "charts": false,
+    "html": true,
+    "json": true,
+    "reportDir": "cypress/reports",
+    "reportFilename": "report",
+    "overwrite": true
+  },
   "env": {
     "userName": "Test123!",
     "password": "Test123!"

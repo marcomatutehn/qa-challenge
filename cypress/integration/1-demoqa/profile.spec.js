@@ -10,8 +10,6 @@ const bookstore = new Bookstore();
 const user_name = Cypress.env('userName');
 const password = Cypress.env('password');
 
-let search_book = 'Git Pocket Guide';
-
 describe('Profile in DEMOQA ', () => {
     before(() => {
         login.navigate();
