@@ -32,7 +32,7 @@ npm install
 
 ```
 
-npm run cy:run
+npm run cypress:run
 
 or
 
