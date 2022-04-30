@@ -26,7 +26,7 @@ describe('Profile in DEMOQA ', () => {
         it('should login into DemoQA', () => {
             login.login(user_name, password);
         });
-        it('should validate user login succesfull ', function () {
+        it('should validate user login succesfull ', () => {
             cy.url().should('eq', `${Cypress.config('baseUrl')}/profile`);
         });
         it('should logout from profile ', () => {
@@ -49,7 +49,7 @@ describe('Profile in DEMOQA ', () => {
             cy.wait(2000)
             cy.get('.mr-2').should('exist').first().click()
         })
-        it('should go back to book store', function () {
+        it('should go back to book store', () => {
             cy.get('#addNewRecordButton').should('exist').click()
         });
     })
