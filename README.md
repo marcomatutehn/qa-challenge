@@ -21,7 +21,7 @@ npm install cypress
 ## Usage
 
 - Install Node, npm , cypress and git
-- Download the repository of [QA Automation](https://github.com/marcomatutehn/qa-challenge)
+- Download the repository of [QA Challenge](https://github.com/marcomatutehn/qa-challenge)
 - Open package.json and run the following command:
 ```
 
